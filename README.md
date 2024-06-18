@@ -45,3 +45,32 @@ SELECT *
 FROM Customers
 WHERE ContactName LIKE '%n';
 ```
+
+# SQL 管理任务
+
+## 1. 创建登录连接账户
+
+创建一个登录连接账户 `ProjectAdmin2024`，密码为 `Admin2024`。
+
+```sql
+EXEC sp_addlogin 'ProjectAdmin2024', 'Admin2024';
+```
+## 2. 授予创建数据库的权限
+为 `ProjectAdmin2024` 授予创建数据库的权限。
+```sql
+EXEC sp_addsrvrolemember 'ProjectAdmin2024', 'dbcreator';
+```
+## 3. 映射数据库用户
+将 `ProjectAdmin2024` 映射成 `Northwind` 数据库中的 `NWind2024` 的用户。
+
+```sql
+USE Northwind;
+EXEC sp_adduser 'ProjectAdmin2024', 'NWind2024';
+```
+## 4. 添加角色成员
+使 `NWind2024` 成为 `Northwind` 的 `db_owner` 的成员。
+
+```sql
+USE Northwind;
+EXEC sp_addrolemember 'db_owner', 'NWind2024';
+```
