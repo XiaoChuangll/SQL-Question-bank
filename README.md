@@ -124,6 +124,7 @@ DELETE FROM Employees WHERE EmployeeID = 2;
 # SQL 定义任务
 
 ## 1. 创建函数 `fn_CategoryName`
+请在`NathWind`数据库中，为`Categories`表创建一个主名函数`fn_CategoryName`,该函数能利用`Categories`。
 ```sql
 CREATE FUNCTION fn_CategoryName(@CategoryID int)
 RETURNS varchar(32)
@@ -135,6 +136,7 @@ BEGIN
 END;
 ```
 ## 2. 创建函数 `fn_YearOrderFrom`
+在`NathWind`数据库中，创建一个函数`fn_YearOrderNum`，该函数能够计算返回指定年份的订单数量。
 ```sql
 CREATE FUNCTION fn_YearOrderFrom(@Year int)
 RETURNS int
@@ -146,6 +148,7 @@ BEGIN
 END;
 ```
 ## 3. 创建存储过程 `proc_Employees_Insert`
+为在第四题中创建的“用户s”表创建一个存储过程为`proc_Employees_Insert`，只要给该过程提供相应的参数，就可
 ```sql
 CREATE PROCEDURE proc_Employees_Insert
     @Name varchar(32),
@@ -158,6 +161,7 @@ BEGIN
 END;
 ```
 ## 4. 创建触发器 `try_OrderDetails_Insert`
+在`Northwind`数据库的`[Oeder Detalls]`表中创建一个名为`try_OrderDetalls_Insert`的触发器`[Trigger]`
 ```sql
 CREATE TRIGGER try_OrderDetails_Insert
 ON [Order Details]
