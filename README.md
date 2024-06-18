@@ -120,3 +120,50 @@ UPDATE Employees SET Name = 'Bill Clinton' WHERE EmployeeID = 2;
 ```sql
 DELETE FROM Employees WHERE EmployeeID = 2;
 ```
+
+# SQL 定义任务
+
+## 1. 创建函数 `fn_CategoryName`
+```sql
+CREATE FUNCTION fn_CategoryName(@CategoryID int)
+RETURNS varchar(32)
+AS
+BEGIN
+    DECLARE @name varchar(32);
+    SELECT @name = CategoryName FROM Categories WHERE CategoryID = @CategoryID;
+    RETURN @name;
+END;
+```
+## 2. 创建函数 `fn_YearOrderFrom`
+```sql
+CREATE FUNCTION fn_YearOrderFrom(@Year int)
+RETURNS int
+AS
+BEGIN
+    DECLARE @num int;
+    SELECT @num = COUNT(*) FROM Orders WHERE YEAR(OrderDate) = @Year;
+    RETURN @num;
+END;
+```
+## 3. 创建存储过程 `proc_Employees_Insert`
+```sql
+CREATE PROCEDURE proc_Employees_Insert
+    @Name varchar(32),
+    @Department varchar(64),
+    @Salary money
+AS
+BEGIN
+    INSERT INTO Employees (Name, Department, Salary)
+    VALUES (@Name, @Department, @Salary);
+END;
+```
+## 4. 创建触发器 `try_OrderDetails_Insert`
+```sql
+CREATE TRIGGER try_OrderDetails_Insert
+ON [Order Details]
+FOR INSERT
+AS
+BEGIN
+    PRINT 'Data has been inserted into Order Details';
+END;
+```
