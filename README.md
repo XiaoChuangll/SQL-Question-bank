@@ -1,4 +1,24 @@
 # SQL 知识测验
+1. 在SQL查询中，哪个关键字用于指定条件？
+   - **A. WHERE**
+
+2. 以下哪个事件不能激活DML触发器的执行？
+   - **A. SELECT**
+
+3. Northwind的实体关系中，Products与Customers之间具有什么联系？
+   - **D. 多对多**
+
+4. 执行以下语句,执行完成后循环次数为多少？
+   ```sql
+   DECLARE @N INT
+   SET @N=5
+   WHILE @N<7
+   BEGIN
+       IF @N=4 PRINT @N*@N
+       SET @N=@N+1
+   END
+   ```
+   - **C. 2次**
 
 5. **SQL Server 中复制表结构（源表名:A 新表名:B），下面的语句正确的是：**
    - **B. `SELECT * INTO B FROM A WHERE 1<>1`**
