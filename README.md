@@ -13,7 +13,7 @@ SELECT
 FROM Employees;
 ```
 
-##2. 查询产品信息
+## 2. 查询产品信息
 从 `Products` 表中查询出价格在 20 美元到 50 美元之间的产品的以下信息：产品编号，产品名字，类别编号，供货商编号，单价，库存量。
 ```sql
 
@@ -28,7 +28,7 @@ FROM Products
 WHERE UnitPrice BETWEEN 20 AND 50;
 ```
 
-##3. 查询特定时间段订单
+## 3. 查询特定时间段订单
 查询一下 1997 年第二季度的所有订单信息。
 ```sql
 
@@ -37,7 +37,7 @@ FROM Orders
 WHERE YEAR(OrderDate) = 1997 AND MONTH(OrderDate) IN (4, 5, 6);
 ```
 
-##4. 查询特定条件的客户信息
+## 4. 查询特定条件的客户信息
 从 `Customers` 表中查询出 `ContactName` 以“n”结尾的客户公司信息。
 
 ```sql
