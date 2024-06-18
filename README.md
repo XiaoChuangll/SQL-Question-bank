@@ -74,3 +74,49 @@ EXEC sp_adduser 'ProjectAdmin2024', 'NWind2024';
 USE Northwind;
 EXEC sp_addrolemember 'db_owner', 'NWind2024';
 ```
+
+# SQL 数据库管理任务
+
+## 1. 创建 `Employees` 表
+
+创建一个名为 `Employees` 的表，包含以下字段：`EmployeeID`（主键，整数类型，标识列），`Name`（字符串类型），`Department`（字符串类型），`Salary`（货币类型）。
+
+```sql
+CREATE TABLE Employees (
+    EmployeeID INT IDENTITY PRIMARY KEY,
+    Name VARCHAR(32),
+    Department VARCHAR(64),
+    Salary MONEY
+);
+```
+## 2. 添加唯一约束
+为 `Employees` 表添加一个唯一约束，确保每个员工的名称是唯一的。
+
+```sql
+ALTER TABLE Employees ADD CONSTRAINT unq_Employees_Name UNIQUE(Name);
+```
+## 3. 添加检查约束
+为 `Employees` 表中的 `Salary` 列添加一个检查约束，确保薪水大于 0。
+
+```sql
+ALTER TABLE Employees ADD CONSTRAINT chk_Employees_Salary CHECK (Salary > 0);
+```
+## 4. 插入数据
+向 `Employees` 表中加入 2 条数据。
+
+```sql
+INSERT INTO Employees (Name, Department, Salary) VALUES ('Antony Blinken', 'CS', 4999);
+INSERT INTO Employees (Name, Department, Salary) VALUES ('Joe Biden', 'NT', 14999);
+```
+## 5. 修改数据
+修改第二条数据的名字为 `Bill Clinton`。
+
+```sql
+UPDATE Employees SET Name = 'Bill Clinton' WHERE EmployeeID = 2;
+```
+## 6. 删除数据
+删除第二条数据。
+
+```sql
+DELETE FROM Employees WHERE EmployeeID = 2;
+```
