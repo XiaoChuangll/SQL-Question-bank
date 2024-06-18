@@ -1,3 +1,39 @@
+# SQL 知识测验
+
+5. **SQL Server 中复制表结构（源表名:A 新表名:B），下面的语句正确的是：**
+   - **B. `SELECT * INTO B FROM A WHERE 1<>1`**
+
+6. **建立索引的目的是：**
+   - **D. 提高SQL Server数据检索的速度**
+
+7. **通过 SQL，您如何根据 "FirstName" 列降序地从"Persons" 表返回所有记录？**
+   - **B. `SELECT * FROM Persons ORDER BY FirstName DESC`**
+
+8. **能够将"java”课的学分赋值给变量的语句是哪一个？**
+   - **C. `SELECT @credit = credit FROM course WHERE cname = 'java'`**
+
+9. **学生成绩表grade中有字段score,现在要把所有在55分至60之间的分数提高5分，以下sql语句正确的是：**
+   - **C. `UPDATE grade SET score = score + 5 WHERE score BETWEEN 55 AND 60`**
+
+10. **游标处理步骤的第二步是什么？**
+    - **A. 打开游标**
+
+11. **Sql服务启动模式默认为：**
+    - **D. 自动**
+
+12. **调用标量函数时，至少使用（D）和函数名**
+    - **D. 用户名**
+
+13. **在关系数据库中，下列选项哪个不是主键的作用：**
+    - **A. 确定每个字段的数据类型**
+
+14. **关于T-SQL语言，以下说法正确的是：**
+    - **C. T-SQL语言提供了流程控制功能**
+
+15. **SQL中的JOIN操作用于：**
+    - **A. 合并两个表的数据**
+
+
 # SQL 查询任务
 
 ## 1. 查询雇员信息
