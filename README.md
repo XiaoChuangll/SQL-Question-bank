@@ -21,19 +21,19 @@
    - **C. 2次**
 
 5. **SQL Server 中复制表结构（源表名:A 新表名:B），下面的语句正确的是：**
-   - **B. `SELECT * INTO B FROM A WHERE 1<>1`**
+   - **B. SELECT * INTO B FROM A WHERE 1<>1**
 
 6. **建立索引的目的是：**
    - **D. 提高SQL Server数据检索的速度**
 
 7. **通过 SQL，您如何根据 "FirstName" 列降序地从"Persons" 表返回所有记录？**
-   - **B. `SELECT * FROM Persons ORDER BY FirstName DESC`**
+   - **B. SELECT * FROM Persons ORDER BY FirstName DESC**
 
 8. **能够将"java”课的学分赋值给变量的语句是哪一个？**
-   - **C. `SELECT @credit = credit FROM course WHERE cname = 'java'`**
+   - **C. SELECT @credit = credit FROM course WHERE cname = 'java'**
 
 9. **学生成绩表grade中有字段score,现在要把所有在55分至60之间的分数提高5分，以下sql语句正确的是：**
-   - **C. `UPDATE grade SET score = score + 5 WHERE score BETWEEN 55 AND 60`**
+   - **C. UPDATE grade SET score = score + 5 WHERE score BETWEEN 55 AND 60**
 
 10. **游标处理步骤的第二步是什么？**
     - **A. 打开游标**
