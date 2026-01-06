@@ -227,3 +227,4 @@ BEGIN
     PRINT 'Data has been inserted into Order Details';
 END;
 ```
+微信支付：自动扣费¥500.00
