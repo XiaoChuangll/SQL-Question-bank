@@ -1,0 +1,1 @@
+HexHub 一款高颜值的全栈开发运维工具，集数据库管理、SSH终端、SFTP传输和Docker管理于一体，支持Windows/macOS/Linux全平台。该工具具有三大核心功能：数据库管理SSH/SFTP管理Docker可视化管理
